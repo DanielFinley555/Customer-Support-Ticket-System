@@ -21,7 +21,6 @@ async function unresolvedTickets(ticketId) {
 
 
 //Task 3: Display Tickets Dynamically on the Page
-//Only got it to work for the 1st ticket, not sure why
 
         const ticket = await res.json();
         console.log('Ticket:', ticket);
@@ -35,7 +34,21 @@ async function unresolvedTickets(ticketId) {
     } catch (error) {
         console.error('Error:', error.message);
     }
+
+
+    
+    //Task 4: Use finally to Ensure Cleanup
+    finally{()=>{
+                console.log("Don't worry, help is on the way!");
+    }
+}
 }
 
 //Fetch and display tickets for customer with ID 1
+//You can plug in any id # into the function and it will give you the information for that ticket
 unresolvedTickets(1);
+unresolvedTickets(14);
+unresolvedTickets(59);
+unresolvedTickets(34);
+unresolvedTickets(89);
+unresolvedTickets(100);
